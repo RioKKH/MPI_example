@@ -12,6 +12,7 @@ BINDIR="/home/s2030025/work/MPI_example"
 module purge
 module load openmpi
 cd ${PBS_O_WORKDIR}
-mpirun -np 16 --hostfile ${PBS_NODEFILE} ${BINDIR}/hello_mpi > ${PWD}/hello_mpi.log
+mpiexec -np 16 --hostfile ${PBS_NODEFILE} ${BINDIR}/hello_mpi > ${PWD}/hello_mpi.log
+#mpirun -np 16 --hostfile ${PBS_NODEFILE} ${BINDIR}/hello_mpi > ${PWD}/hello_mpi.log
 # mpirun -np 16 --hostfile ${PBS_NODEFILE} ${BINDIR}/rank > rank.log
 

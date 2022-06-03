@@ -1,9 +1,10 @@
 MPICC := mpic++
-MPICCFLAGS := -Wall -g
+MPICCFLAGS := -O3 -g
+#MPICCFLAGS := -Wall -g
 DEST := /usr/local/bin
 LDFLAGS := -L/usr/local/lib
-LIBS := -lm
-# LIBS := -lm -lmpi
+#LIBS := -lm
+LIBS := -lm -lmpi -lmpi_cxx
 
 OBJS = hello_mpi
 #OBJS := hello rank rank2 rank_stream\
